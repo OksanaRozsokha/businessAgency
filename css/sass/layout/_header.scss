@@ -1,0 +1,16 @@
+.main-header {
+  padding-top: 5rem;
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+  @media (max-width: 991px) {
+    @include align-items(flex-start);
+  }
+}
+.logo {
+  display: block;
+}
+h1 {
+  text-indent: -9999px;
+}
+

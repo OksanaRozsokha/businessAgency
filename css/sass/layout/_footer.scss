@@ -1,0 +1,19 @@
+.main-footer {
+  padding: 6.5rem 0;
+  background: $secondary-color;
+
+  p {
+    max-width: 66.5rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  a {
+    @include proxima-bold(1.8rem);
+    color: $text-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

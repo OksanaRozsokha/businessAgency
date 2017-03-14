@@ -1,0 +1,519 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "proxima-nova-reg";
+  src: url("../fonts/proxima-nova/regular/proxima-nova-reg.ttf") format("truetype"), url("../fonts/proxima-nova/regular/proxima-nova-reg.otf") format("opentype");
+}
+@font-face {
+  font-family: "proxima-nova-bold";
+  src: url("../fonts/proxima-nova/bold/proxima-nova-bold.ttf") format("truetype"), url("../fonts/proxima-nova/bold/proxima-nova-bold.otf") format("opentype");
+}
+html {
+  font-size: 0.625rem;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color: #000;
+}
+
+.owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  height: 6rem;
+  width: 5.5rem;
+  text-indent: -9999px;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  background: url("../img/arrow-right.png") 50% 50% no-repeat;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  background: url("../img/arrow-left.png") 50% 50% no-repeat;
+}
+
+.active {
+  overflow: hidden;
+}
+
+.text {
+  font: 1.8rem "proxima-nova-reg", sans-serif;
+  color: #949494;
+  line-height: 1.666em;
+}
+.text-small {
+  font-size: 1.4rem;
+}
+.text-white {
+  color: #fff;
+}
+
+.title {
+  font: 9vmin "proxima-nova-bold", sans-serif;
+  color: #000;
+}
+.title-reg {
+  font-family: "proxima-nova-reg", sans-serif;
+}
+.title-white {
+  color: #fff;
+}
+.title-small {
+  font-size: calc(0.5rem + 4vmin);
+}
+
+.btn {
+  display: inline-block;
+  font: 1.8rem "proxima-nova-reg", sans-serif;
+  padding: 0.8em 1.111em;
+  background: transparent;
+  border: none;
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+  color: #000;
+  cursor: pointer;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+@media (max-width: 991px) {
+  .menu-list .btn {
+    color: #fff;
+  }
+}
+.btn-bigger {
+  padding: 0.8333em 2.7777em;
+}
+.btn-center {
+  display: block;
+  margin: 0 auto;
+}
+.btn-border {
+  border: 1px solid transparent;
+}
+.btn-border:hover {
+  border: 1px solid #000;
+}
+@media (max-width: 991px) {
+  .menu-list .btn-border:hover {
+    border: 1px solid #fff;
+  }
+}
+.btn-color {
+  background: -webkit-linear-gradient(150deg, #49007c, #e70088);
+  background: linear-gradient(150deg, #49007c, #e70088);
+  color: #fff;
+}
+.btn-color:hover {
+  background: -webkit-linear-gradient(123deg, #e70088, #49007c);
+  background: linear-gradient(123deg, #e70088, #49007c);
+}
+.btn-menu {
+  width: 3rem;
+  height: 2.5rem;
+  background: url("../img/menu-icon.png") 50% 50% no-repeat;
+  text-indent: -9999px;
+}
+
+.main-nav {
+  width: 52%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.menu-list {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .menu-list {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    vertical-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .menu-list li {
+    margin-top: 2%;
+  }
+}
+
+.head {
+  max-width: 70rem;
+  text-align: center;
+  margin: 0 auto 11.5rem;
+}
+
+.main-header {
+  padding-top: 5rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .main-header {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.logo {
+  display: block;
+}
+
+h1 {
+  text-indent: -9999px;
+}
+
+.intro {
+  position: relative;
+  height: 100vh;
+  background: url("../img/intro-bg.png") 50% 0 no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+@media (max-height: 560px) {
+  .intro {
+    height: auto;
+    padding-bottom: 6rem;
+  }
+}
+.intro .container {
+  height: 100%;
+}
+
+.intro-content {
+  width: 100%;
+  margin-top: 15%;
+  text-align: center;
+}
+.intro-content .btn {
+  margin: 6rem 0;
+}
+
+.scroll-item {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: #fff;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+@media (max-height: 560px) {
+  .scroll-item {
+    display: none;
+  }
+}
+.scroll-item:before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 4.5rem;
+  background: url("../img/scroll-icon.png") 50% 50% no-repeat;
+  margin: 0 auto 1rem;
+}
+
+.best-services {
+  padding: 14.5rem 0;
+  background: url("../img/services-bg.png") 50% 0 no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.best-services-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .best-services-list {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+.best-services-list li {
+  margin-bottom: 3rem;
+}
+@media only screen and (max-width: 479px) {
+  .best-services-list li {
+    text-align: center;
+  }
+}
+@media (max-width: 1199px) {
+  .best-services-list li:first-child {
+    margin-right: 2.5rem;
+  }
+}
+@media (max-width: 991px) {
+  .best-services-list li:first-child {
+    margin: 0 0 6rem 0;
+  }
+}
+.best-services-list h2 {
+  margin-bottom: 3rem;
+}
+.best-services-list p {
+  max-width: 50rem;
+  margin-bottom: 4rem;
+}
+
+.our-works {
+  padding-top: 9.5rem;
+  background: #fff;
+}
+.our-works .container > .btn {
+  margin-bottom: 9rem;
+}
+
+.works-list {
+  margin-bottom: 2.5rem;
+}
+@media only screen and (max-width: 479px) {
+  .works-list {
+    padding-left: 1rem;
+  }
+}
+.works-list li {
+  position: relative;
+  margin-bottom: 8.5rem;
+  padding-left: 16.5rem;
+}
+@media only screen and (max-width: 479px) {
+  .works-list li {
+    padding: 14.5rem 0 0 0;
+    text-align: center;
+  }
+}
+.works-list li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13.5rem;
+  height: 11rem;
+}
+@media only screen and (max-width: 479px) {
+  .works-list li:before {
+    top: 0;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+.works-list h3 {
+  margin-bottom: 2.5rem;
+}
+
+.design-ic:before {
+  background: url("../img/design-icon.png") 50% 50% no-repeat;
+}
+
+.web-ic:before {
+  background: url("../img/applications-icon.png") 50% 50% no-repeat;
+}
+
+.painting-ic:before {
+  background: url("../img/paiting-icon.png") 50% 50% no-repeat;
+}
+
+.desktop-ic:before {
+  background: url("../img/desktop-icon.png") 50% 50% no-repeat;
+}
+
+.slider-item {
+  position: relative;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.slider-item:hover .hover-block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.hover-block {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0 1rem;
+}
+.hover-block h3 {
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 479px) {
+  .hover-block h3 {
+    font-size: 1.8rem;
+  }
+}
+.hover-block p {
+  max-width: 39rem;
+  text-align: center;
+  margin-bottom: 10%;
+}
+@media (max-width: 669px) {
+  .hover-block p {
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .hover-block p {
+    font-size: 1.4rem;
+  }
+}
+
+.about-us {
+  padding: 11.5rem 0;
+  background: url("../img/about-us-bg.png") 50% 0 no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about-us h2 {
+  margin-bottom: 3rem;
+}
+
+.about-us-list {
+  margin-bottom: 5rem;
+}
+.about-us-list li {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+.about-us-list h3 {
+  margin: 2.5rem 0;
+}
+
+.map iframe {
+  width: 100%;
+  min-height: 50rem;
+}
+
+.main-footer {
+  padding: 6.5rem 0;
+  background: #fff;
+}
+.main-footer p {
+  max-width: 66.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-footer a {
+  font: 1.8rem "proxima-nova-bold", sans-serif;
+  color: #949494;
+}
+.main-footer a:hover, .main-footer a:active, .main-footer a:focus {
+  text-decoration: underline;
+}

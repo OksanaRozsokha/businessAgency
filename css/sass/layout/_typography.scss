@@ -1,0 +1,29 @@
+.text {
+  @include proxima-reg(1.8rem);
+  color: $text-color;
+  line-height: 1.666em;
+
+  &-small {
+    font-size: 1.4rem;
+  }
+
+  &-white {
+    color: $secondary-color;
+  }
+}
+
+.title {
+  @include proxima-bold(9vmin);
+  color: $primary-color;
+
+  &-reg {
+    font-family: "proxima-nova-reg", sans-serif;
+  }
+
+  &-white {
+    color: $secondary-color;
+  }
+  &-small {
+    font-size: calc(0.5rem + 4vmin);
+  }
+}

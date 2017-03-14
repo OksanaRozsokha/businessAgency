@@ -1,0 +1,39 @@
+.best-services {
+  padding: 14.5rem 0;
+  @include section-bg("../img/services-bg.png");
+  background-attachment: fixed;
+}
+.best-services-list {
+  @include display-flex;
+  @include justify-content(space-between);
+  @media (max-width: 991px) {
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  li {
+    margin-bottom: 3rem;
+    @include respond-to(handhelds) {
+      text-align: center;
+    }
+
+    &:first-child {
+      @media (max-width: 1199px) {
+        margin-right: 2.5rem;
+      }
+      @media (max-width: 991px) {
+        margin: 0 0 6rem 0;
+
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    max-width: 50rem;
+    margin-bottom: 4rem;
+  }
+}

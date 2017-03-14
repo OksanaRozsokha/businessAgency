@@ -1,0 +1,43 @@
+.intro {
+  position: relative;
+  height: 100vh;
+  @include section-bg("../img/intro-bg.png");
+  background-attachment: fixed;
+  @media  (max-height: 560px) {
+    height: auto;
+    padding-bottom: 6rem;
+  }
+  .container {
+    height: 100%;
+  }
+}
+.intro-content {
+  width: 100%;
+  margin-top: 15%;
+  text-align: center;
+
+  .btn {
+    margin: 6rem 0;
+  }
+}
+.scroll-item {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  @include transform(translateX(-50%));
+  color: $secondary-color;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  @media  (max-height: 560px) {
+   display: none;
+  }
+
+  &:before {
+    @include pseudo('', block);
+    width: 2.5rem;
+    height: 4.5rem;
+    @include small-bg("../img/scroll-icon.png");
+    margin: 0 auto 1rem;
+  }
+}

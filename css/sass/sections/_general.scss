@@ -1,0 +1,41 @@
+html {
+  font-size: 0.625rem;
+}
+a {
+  text-decoration: none;
+  &:hover {
+     color: $primary-color;
+   }
+  &:active {
+    @extend a:hover;
+  }
+  &:focus {
+    @extend a:hover;
+  }
+}
+
+.owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  height: 6rem;
+  width: 5.5rem;
+  text-indent: -9999px;
+
+}
+.owl-carousel .owl-nav .owl-next {
+  top: 50%;
+  @include transform(translateY(-50%));
+  right: 0;
+  @include small-bg("../img/arrow-right.png");
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  top: 50%;
+  @include transform(translateY(-50%));
+  left: 0;
+  @include small-bg("../img/arrow-left.png");
+}
+.active {
+  overflow: hidden;
+}

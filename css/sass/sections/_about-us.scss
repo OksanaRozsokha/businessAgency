@@ -1,0 +1,19 @@
+.about-us {
+  padding: 11.5rem 0;
+  @include section-bg("../img/about-us-bg.png");
+  background-attachment: fixed;
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+.about-us-list {
+  margin-bottom: 5rem;
+  li {
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+  h3 {
+    margin: 2.5rem 0;
+  }
+
+}
