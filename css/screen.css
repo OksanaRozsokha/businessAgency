@@ -157,6 +157,11 @@ a:hover, a:active, a:focus {
     color: #fff;
   }
 }
+@media (max-width: 991px) {
+  .menu-list-small .btn {
+    color: #fff;
+  }
+}
 .btn-bigger {
   padding: 0.8333em 2.7777em;
 }
@@ -172,6 +177,11 @@ a:hover, a:active, a:focus {
 }
 @media (max-width: 991px) {
   .menu-list .btn-border:hover {
+    border: 1px solid #fff;
+  }
+}
+@media (max-width: 991px) {
+  .menu-list-small .btn-border:hover {
     border: 1px solid #fff;
   }
 }
@@ -206,25 +216,21 @@ a:hover, a:active, a:focus {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-@media (max-width: 991px) {
-  .menu-list {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 60%;
-    background: rgba(0, 0, 0, 0.95);
-    text-align: center;
-    vertical-align: center;
-  }
+.menu-list-small {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.95);
+  text-align: center;
+  vertical-align: center;
 }
-@media (max-width: 991px) {
-  .menu-list li {
-    margin-top: 2%;
-  }
+.menu-list-small li {
+  margin-top: 2%;
 }
 
 .head {

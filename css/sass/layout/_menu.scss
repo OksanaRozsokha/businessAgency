@@ -2,28 +2,31 @@
   width: 52%;
   @include display-flex;
   @include justify-content(flex-end);
-}
+ }
+
 .menu-list {
   width: 100%;
   @include display-flex;
   @include justify-content(space-between);
 
-  @media (max-width: 991px)  {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 60%;
-      background: rgba(0, 0, 0, .95);
-      text-align: center;
-      vertical-align: center;
-  }
-  li {
-    @media (max-width: 991px)  {
+  &-small {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    vertical-align: center;
+
+    li {
       margin-top: 2%;
     }
   }
+
 }
+
+

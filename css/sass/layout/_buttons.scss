@@ -14,6 +14,11 @@
       color: $secondary-color;
     }
   }
+  .menu-list-small & {
+    @media (max-width: 991px)  {
+      color: $secondary-color;
+    }
+  }
 
   &-bigger {
     padding: 0.8333em 2.7777em;
@@ -29,6 +34,13 @@
       border: 1px solid $primary-color
     }
     .menu-list & {
+      &:hover {
+        @media (max-width: 991px)  {
+          border: 1px solid $secondary-color;
+        }
+      }
+    }
+    .menu-list-small & {
       &:hover {
         @media (max-width: 991px)  {
           border: 1px solid $secondary-color;

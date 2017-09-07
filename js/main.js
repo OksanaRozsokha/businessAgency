@@ -1,28 +1,35 @@
 
-$(document).ready(function() {
+$(function() {
     //menu on click
+
     let flagMenu = true;
 
     $('#menu').on('click', function (e) {
-        e.stopPropagation();
-        if(flagMenu) {
-            flagMenu = false;
-            $('.menu-list').slideToggle(function () {
-                flagMenu = true;
-            });
-            $('body').toggleClass('active');
-        }
-    });
-    $('body').on('click', function () {
-        $('.menu-list').fadeOut();
-        $('body').removeClass()('active');
-    });
-    $('.menu-list').on('click', function (e) {
-        e.stopPropagation();
-    });
-    //
+       e.stopPropagation();
 
-    $(".owl-carousel").owlCarousel({
+
+       if (flagMenu) {
+           flagMenu = false;
+
+           $('.menu-list-small').slideToggle(function () {
+               flagMenu = true;
+           });
+
+           $('body').toggleClass('active');
+       }
+    });
+
+    $('body').on('click', function () {
+       $('.menu-list-small').fadeOut();
+       $('body').removeClass('active');
+    });
+
+    $('.menu-list-small').on('click', function (e) {
+       e.stopPropagation();
+    });
+
+
+  $(".owl-carousel").owlCarousel({
         loop: true,
         nav: true,
         dots: false,
@@ -47,16 +54,18 @@ $(document).ready(function() {
     });
 
     //outline none
+
     $('button, a').on('focus', function () {
         $(this).blur();
     });
 
     //  scroll down btn
-    $('.scroll-item').on('click', function () {
+  $('.scroll-item').on('click', function () {
+     let scrollTo = $(this).attr('data-scrollTo');
 
-        let scrollTo = $(this).attr('data-scrollTo');
-        $('body, html').animate({
-            "scrollTop": $('.' + scrollTo).offset().top}, 2000);
-        return false;
-    });
+     $('body, html').animate({
+        "scrollTop": $('.' + scrollTo).offset().top
+     }, 2000);
+     return false;
+  });
 });
