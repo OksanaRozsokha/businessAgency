@@ -60,12 +60,16 @@ $(function() {
     });
 
     //  scroll down btn
-  $('.scroll-item').on('click', function () {
-     let scrollTo = $(this).attr('data-scrollTo');
 
-     $('body, html').animate({
-        "scrollTop": $('.' + scrollTo).offset().top
-     }, 2000);
-     return false;
-  });
+    $('.scroll-item').click(function () {
+
+        let scrollTo = $(this).attr('data-scrollTo');
+
+        $('html, body').animate({
+            "scrollTop": $('.' + scrollTo).offset().top
+        }, 2000);
+        return false;
+    });
+
+   
 });
